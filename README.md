@@ -9,3 +9,7 @@ Download plugin ini, kemudian upload ke folder directory plugin di website WordP
 # Penggunaan
 
 Cukup tambahkan shortcode [cek_ongkir_jne] di laman manapun untuk menambahkan fitur cek ongkir
+
+# Live Demo
+
+Untuk demo plugin ini, bisa ditemukan di laman ini https://www.kreatibandung.com/cek-ongkir-jne/
