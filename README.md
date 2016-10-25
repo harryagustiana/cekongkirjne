@@ -12,4 +12,4 @@ Cukup tambahkan shortcode [cek_ongkir_jne] di laman manapun untuk menambahkan fi
 
 # Live Demo
 
-Untuk demo plugin ini, bisa ditemukan di laman ini https://www.kreatibandung.com/cek-ongkir-jne/
+Untuk demo plugin ini, bisa ditemukan di laman ini https://blog.harryagustiana.web.id/cek-ongkir-jne/

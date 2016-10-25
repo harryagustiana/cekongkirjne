@@ -8,8 +8,13 @@ Author: Harry Agustiana
 Author URI: https://harryagustiana.web.id
 */
 
+//Initialized API Key
+$key = '74215fc3b9402b130a384d46365f72b6';
 
 function choose_city() {
+
+	global $key;
+
 	$curl = curl_init();
 
 	curl_setopt_array($curl, array(
@@ -21,7 +26,7 @@ function choose_city() {
 	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	  CURLOPT_CUSTOMREQUEST => "GET",
 	  CURLOPT_HTTPHEADER => array(
-	    "key: 74215fc3b9402b130a384d46365f72b6"
+	    "key: " . $key
 	  ),
 	));
 
@@ -69,8 +74,7 @@ function choose_city() {
 
 function output_result() {
 
-	
-
+	global $key;
 
 	// if the submit button is clicked, send the email
 	if ( isset( $_POST['coj-submit'] ) ) {
@@ -95,7 +99,7 @@ function output_result() {
 		  CURLOPT_POSTFIELDS => "origin=".$origin."&destination=".$target."&weight=".$weight."&courier=jne",
 		  CURLOPT_HTTPHEADER => array(
 		    "content-type: application/x-www-form-urlencoded",
-		    "key: 74215fc3b9402b130a384d46365f72b6"
+		    "key: " . $key
 		  ),
 		));
 
