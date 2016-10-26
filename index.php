@@ -3,7 +3,7 @@
 Plugin Name: Cek Ongkir JNE
 Plugin URI: https://github.com/harryagustiana/cekongkirjne
 Description: Sebuah plugin untuk menampilkan fitur cek biaya ongkos kirim oleh jasa pengiriman JNE berdasarkan kota pengiriman dan kota tujuan yang diperlukan di dalam sebuah laman. Menggunakan API RajaOngkir dalam proses perhitungannya.
-Version: 1.1
+Version: 1.0
 Author: Harry Agustiana
 Author URI: https://harryagustiana.web.id
 */
@@ -50,7 +50,7 @@ function choose_city() {
 	echo '<form name="coj-inputdata" id="coj-inputdata" action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
 	echo '<p>';
 	echo 'Kota Asal : <br/>';
-	echo '<select class="chosen-select" name="coj-origin">';
+	echo '<select class="chosen-select" name="coj-origin" required>';
 	foreach($responsecity['rajaongkir']['results'] as $origin){
 		echo "<option value=" . $origin['city_id'] . ">" . $origin['city_name'] . "</option>";
 	}
@@ -58,7 +58,7 @@ function choose_city() {
 	echo '</p>';
 	echo '<p>';
 	echo 'Kota Tujuan <br/>';
-	echo '<select class="chosen-select" name="coj-target">';
+	echo '<select class="chosen-select" name="coj-target" required>';
 	foreach($responsecity['rajaongkir']['results'] as $target){
 		echo "<option value=" . $target['city_id'] . ">" . $target['city_name'] . "</option>";
 	}
@@ -66,7 +66,7 @@ function choose_city() {
 	echo '</p>';
 	echo '<p>';
 	echo 'Berat Kiriman (Gram) <br/>';
-	echo '<input type="number" name="coj-weight" pattern="[a-zA-Z0-9 ]+" value="' . ( isset( $_POST["coj-weight"] ) ? esc_attr( $_POST["coj-weight"] ) : '' ) . '" size="40" />';
+	echo '<input required type="number" name="coj-weight" min="1" size="40" />';
 	echo '</p>';
 	echo '<p><input type="submit" name="coj-submit" value="Send"></p>';
 	echo '</form>';
