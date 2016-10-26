@@ -3,7 +3,7 @@
 Plugin Name: Cek Ongkir JNE
 Plugin URI: https://github.com/harryagustiana/cekongkirjne
 Description: Sebuah plugin untuk menampilkan fitur cek biaya ongkos kirim oleh jasa pengiriman JNE berdasarkan kota pengiriman dan kota tujuan yang diperlukan di dalam sebuah laman. Menggunakan API RajaOngkir dalam proses perhitungannya.
-Version: 1.0
+Version: 1.1
 Author: Harry Agustiana
 Author URI: https://harryagustiana.web.id
 */
